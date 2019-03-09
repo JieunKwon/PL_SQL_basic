@@ -5,12 +5,12 @@
 
 1. Blocks 
       
-      DECLARE 
-          Variable declaration
-      BEGIN 
-          Program Execution 
-      EXCEPTION 
-          Exception handling
-      END;
+            DECLARE 
+                Variable declaration
+            BEGIN 
+                Program Execution 
+            EXCEPTION 
+                Exception handling
+            END;
 
 
