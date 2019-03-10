@@ -1,5 +1,8 @@
 # PL/SQL
 
+Procedural Language SQL
+
+
 <a href='https://www.oracle.com/database/technologies/appdev/plsql.html' target='_blank'>Link to Oracle</a>
 
 <a href='https://www.tutorialspoint.com/plsql' target='_blank'>Link to tutorials Point</a>   
@@ -14,8 +17,14 @@
                 Exception handling
             END;
 
+2. Variables
 
-2. Variable Scope  
+           - Substitution variable : used to accept input from a user  
+                        SQL> ACCEPT p_name PROMPT ’Enter Name: ’
+           - Bind variable
+           - PL variable
+
+3. Variable Scope  
 
             - Local variables − declared in an inner block and not accessible to outer blocks
 
@@ -39,6 +48,7 @@
             END; 
             / 
 
-3. Variable Type
+3. Variable Type with SQL 
+
 
       
