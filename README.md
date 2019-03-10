@@ -76,5 +76,24 @@ Procedural Language SQL
                       r_customer cust_record;
 
 
+4. Example - to display customer's information
             
-      
+            - Prompt for the name a customer and display his/her address using simple variables
+            
+            SET SERVEROUTPUT ON;
+            
+            ACCEPT p_name PROMPT 'Enter Customer Name: '
+           
+            DECLARE
+                v_customer customer%ROWTYPE;
+           
+            BEGIN
+               SELECT *
+               INTO v_customer
+               FROM customer
+               WHERE UPPER(custname) = UPPER('&p_name');
+               DBMS_OUTPUT.PUT_LINE('&p_name' || CHR(10) || v_customer.custstreet || CHR(10) 
+               || RTRIM(v_customer.custcity) || ', ' || v_customer.custprovince || CHR(10) || v_customer.custpostal
+               );
+            END;
+            /
