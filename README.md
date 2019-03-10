@@ -17,9 +17,9 @@
 
 2. Variable Scope  
 
-            Local variables − declared in an inner block and not accessible to outer blocks
+            - Local variables − declared in an inner block and not accessible to outer blocks
 
-            Global variables − declared in the outermost block or a package
+            - Global variables − declared in the outermost block or a package
             
             DECLARE 
                -- Global variables  
@@ -38,3 +38,7 @@
                END;  
             END; 
             / 
+
+3. Variable Type
+
+      
