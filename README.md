@@ -20,10 +20,19 @@ Procedural Language SQL
 2. Variables
 
            - Substitution variable : used to accept input from a user  
-                        SQL> ACCEPT p_name PROMPT ’Enter Name: ’
+                        ACCEPT p_name PROMPT ’Enter Name: ’
            - Bind variable
+                        -- declare an SQLplus bind variable
+                        VARIABLE g_name VARCHAR2(30)
+                        BEGIN
+                        -- assign value of substitution variable to the bind variable
+                           :g_name := '&p_name';
+                        END;
+                        /
+                        PRINT g_name
            - PL variable
-
+                        DECLARE
+                           v_name VARCHAR2(20);
 3. Variable Scope  
 
             - Local variables − declared in an inner block and not accessible to outer blocks
@@ -48,7 +57,24 @@ Procedural Language SQL
             END; 
             / 
 
-3. Variable Type with SQL 
+3. Variable Types with SQL statement
+
+            - automatic type from custname's type of customer table
+                  DECLARE
+                  v_name customer.custname%TYPE;
+
+            - with whole columns of table
+                  DECLARE
+                  v_customer customer%ROWTYPE;
+                  
+            - by defining type
+                  DECLARE
+                      TYPE cust_record IS RECORD
+                      (custname VARCHAR2(20), 
+                      custphone CHAR(13),
+                      custaddress CHAR(100));
+                      r_customer cust_record;
 
 
+            
       
