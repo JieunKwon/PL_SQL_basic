@@ -110,4 +110,10 @@ Procedural Language SQL
 
 6. Implicit Cursors
 
-            - Are automatically created by Oracle
+            - are automatically created by Oracle
+            
+            - can refer to it using attributes
+            
+            : SQL%FOUND (true if 1 or more rows are affected)
+            : SQL%NOTFOUND (the opposite of SQL%FOUND)
+            : SQL%ROWCOUNT (the number of rows processed)
