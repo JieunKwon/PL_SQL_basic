@@ -97,3 +97,17 @@ Procedural Language SQL
                );
             END;
             /
+
+5. Cursors
+
+            - is a temporary storage area
+            
+            - is a pointer to this context area
+            
+            - can hold one or more rows of data
+            
+            - is referred to as the active set
+
+6. Implicit Cursors
+
+            - Are automatically created by Oracle
