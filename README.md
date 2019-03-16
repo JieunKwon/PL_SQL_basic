@@ -117,3 +117,30 @@ Procedural Language SQL
             : SQL%FOUND (true if 1 or more rows are affected)
             : SQL%NOTFOUND (the opposite of SQL%FOUND)
             : SQL%ROWCOUNT (the number of rows processed)
+
+7. Explicit Cursors
+
+            - benefis : Enables to loop after storing data selected from a query 
+            - how to use : declare cursors -> open the cursor -> fetch the data from cursor -> close the cursor
+            - ex
+            
+            DECLARE
+                  v_serial car.carserial%TYPE;
+                  v_model car.carmodel%TYPE;
+                  
+                  CURSOR acura_cur IS
+                  SELECT carserial, carmodel
+                  FROM car
+                  WHERE UPPER(carmake) = 'ACURA';
+            BEGIN
+                  OPEN acura_cur;
+                  LOOP
+                  FETCH acura_cur INTO v_serial, v_model;
+                  EXIT WHEN acura_cur%NOTFOUND;
+                  DBMS_OUTPUT.PUT_LINE(v_serial || CHR(9) || v_model);
+                  END LOOP;
+           
+                  DBMS_OUTPUT.PUT_LINE(acura_cur%ROWCOUNT || ' records found');
+                  CLOSE acura_cur;
+            END;
+            /
