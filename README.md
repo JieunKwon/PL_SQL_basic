@@ -122,7 +122,7 @@ Procedural Language SQL
 
             - benefis : Enables to loop after storing data selected from a query 
             - how to use : declare cursors -> open the cursor -> fetch the data from cursor -> close the cursor
-            - ex
+            (example)
             
             DECLARE
                   v_serial car.carserial%TYPE;
